@@ -54,7 +54,7 @@
 
 ## 实现
  1. minikube [参考文档]( https://minikube.sigs.k8s.io/docs/start/)
-  * 下载:`curl -LOhttps://kubernetes.io/docs/concepts/services-networking/https://kubernetes.io/docs/concepts/services-networking/ingress/https://kubernetes.io/docs/concepts/services-networking/ingress/https://kubernetes.io/docs/concepts/services-networking/ingress/https://kubernetes.io/docs/concepts/services-networking/ingress/https://kubernetes.io/docs/concepts/services-networking/ingress/https://kubernetes.io/docs/concepts/services-networking/ingress/https://kubernetes.io/docs/concepts/services-networking/ingress/https://kubernetes.io/docs/concepts/services-networking/ingress/ https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64`
+  * 下载:`curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64`
   * 安装:`sudo install minikube-linux-amd64 /usr/local/bin/minikube`
  2. kubectl ，[参考文档]( https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
   * 下载:`curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"`
