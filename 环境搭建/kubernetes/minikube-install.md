@@ -63,12 +63,12 @@
     * 版本查看：`kubectl version --client`
  
  3. 添加kubectl 别名，让每次使用kubectl都在minikube虚拟机内操作。（不用也可以就是操作k8s集群的时候需要多输入命令）
-    `alias kubectl="minikube kubectl --"`
+    * `alias kubectl="minikube kubectl --"`
  
- 4. 启动minikube 
-    `minikube start` 
+ 4. 启动minikube
+    *  `minikube start` 
 
  5. 启动minikube仪表板，使用浏览器打开仪表盘 
-    `nohup minikube dashboard 2>&1 &`
-    ![](./application/command-minikube-dashboard.jpg)
-    ![](./application/web-minikube-dashboard.jpg)
+    *  `nohup minikube dashboard 2>&1 &`
+       ![](./application/command-minikube-dashboard.jpg)
+       ![](./application/web-minikube-dashboard.jpg)
