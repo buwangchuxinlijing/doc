@@ -54,21 +54,21 @@
 
 ## 实现
  1. minikube [参考文档]( https://minikube.sigs.k8s.io/docs/start/)
-  * 下载:`curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64`
-  * 安装:`sudo install minikube-linux-amd64 /usr/local/bin/minikube`
+    * 下载:`curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64`
+    * 安装:`sudo install minikube-linux-amd64 /usr/local/bin/minikube`
  
  2. kubectl ，[参考文档]( https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
-  * 下载:`curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"`
-  * 安装： `sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl`
-  * 版本查看：`kubectl version --client`
+    * 下载:`curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"`
+    * 安装： `sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl`
+    * 版本查看：`kubectl version --client`
  
  3. 添加kubectl 别名，让每次使用kubectl都在minikube虚拟机内操作。（不用也可以就是操作k8s集群的时候需要多输入命令）
- `alias kubectl="minikube kubectl --"`
+    `alias kubectl="minikube kubectl --"`
  
  4. 启动minikube 
-  `minikube start` 
+    `minikube start` 
 
  5. 启动minikube仪表板，使用浏览器打开仪表盘 
-  `nohup minikube dashboard 2>&1 &`
-   ![](./application/command-minikube-dashboard.jpg)
-   ![](./application/web-minikube-dashboard.jpg)
+    `nohup minikube dashboard 2>&1 &`
+    ![](./application/command-minikube-dashboard.jpg)
+    ![](./application/web-minikube-dashboard.jpg)
