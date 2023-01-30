@@ -63,6 +63,7 @@ CMD    java -jar /home/data/k8s-0.0.1-SNAPSHOT.jar
  	* 访问服务，查看能否获取到数据库数据。
 
  4. **pod流量负载均衡处理（ingress）**
+    参考文档:`https://kubernetes.io/docs/concepts/services-networking/ingress/` `https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/`
     > 我们通过增加pod副本 (replicas),使deployment的replicas的数量为3.这个时候进行多次的访问java服务，发现始终访问的为同一个pod上，这很明显不符合负载均衡的理念，应该为三个pod均匀的接收和处理请求，查阅k8s资料需要通过ingress做负载才可以。
     > ingress是管理对集群中服务的外部访问的 API,将来自集群外部的 HTTP 和 HTTPS 路由暴露给集群内的sevice。流量路由由 Ingress 资源上定义的规则控制。如图所示：
     > ![](./application/doc-k8s-ingress.jpg)
@@ -104,8 +105,9 @@ CMD    java -jar /home/data/k8s-0.0.1-SNAPSHOT.jar
        * 浏览器访问：http://hello-world.info:8088/hello/all ,如果使用http://127.0.0.1:8088/hello/all 则会404（ps：注意需要关闭梯子有的梯子代理的时候会占用某些端口）
 
   
-####⑷ mysql数据持久卷处理
+####⑷ mysql数据持久卷处理 
  背景：默认情况下的pod存储空间为临时卷，临时卷跟随pod的生命周期并于pod一起创建和删除，所以当我们需要某些pod的存储空间不跟随pod本身生命周期创建删除时，那么就需要使用到持久卷，将这块存储空间独立出来。
+ 参考文档：`https://kubernetes.io/docs/concepts/storage/volumes/`  `https://minikube.sigs.k8s.io/docs/handbook/persistent_volumes/`
  持久卷的开辟需要三个资源：**1. storage classes 2. persistent volumes 3.persistent volume claims**
  1. **storage classes（存储类）**
 	minikube提供了开箱即用的动态pv（卷类型为：hostpath），他会在minikube VM内创建数据盘。 此外还提供了默认基于hostpath的存储类`provisioner: k8s.io/minikube-hostpath`。 可以直接创建PVC就可以使用。我们这里不使用卷类型为hostpath类型，使用Local类型。因为：与`hostPath卷`相比，`local卷`以持久和便携的方式使用，无需手动将 pod 调度到节点。 创建配置如下：
