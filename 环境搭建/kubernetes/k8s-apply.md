@@ -1,10 +1,16 @@
 ## 前言
  年底事情不多，于是想着搞个k8s技术文章，一来检验之前零零散散的学习k8s成果,二来是想突破一下使用k8s部署一整套java应用。
 ## 目标
- 1. 运行k8s集群，熟悉k8s命令，理解k8s架构 （deployment/pod/service/port-forward）。
- 2. 在k8s上运行mysql。实现k8s应用部署。
- 3. 在k8s上运行java程序（负载均衡），让容器内java程序连接到k8s的mysql。实现k8s容器通信技术（知识点：igress、services）。
- 4. 持久化mysql容器数据卷。实现卷(持久卷)功能（知识点：volumes、PV、PVC）。
+
+ **本篇围绕以下四个目标进行撰写**
+
+ **1. 运行k8s集群，熟悉k8s命令，理解k8s架构 （deployment/pod/service/port-forward）。**
+ 
+ **2. 在k8s上运行mysql。实现k8s应用部署。**
+ 
+ **3. 在k8s上运行java程序（负载均衡），让容器内java程序连接到k8s的mysql。实现k8s容器通信技术（知识点：igress、services）。**
+ 
+ **4. 持久化mysql容器数据卷。实现卷(持久卷)功能（知识点：volumes、PV、PVC）。**
 
 ## 本教程环境
  **操作系统：centos7.8**
